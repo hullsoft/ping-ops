@@ -1,0 +1,26 @@
+{
+    "name": "hullsoft/ping-ops",
+    "description": "HullSoft - Ping/Ops - halper module",
+    "license": "GPL-2.0",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "EVE Game - Nassen",
+            "email": "cezorcezor@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "HullSoft\\Seat\\PingOps\\": "src/"
+        }
+    },
+    "version_normalized": "1.0.0",
+    "minimum-stability": "1.0",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HullSoft\\Seat\\PingOps\\PingOpsServiceProvider"
+            ]
+        }
+    }
+}
