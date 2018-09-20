@@ -2,7 +2,7 @@
     "name": "hullsoft/ping-ops",
     "description": "HullSoft - Ping/Ops - halper module",
     "license": "GPL-2.0",
-    "version": "1.0",
+    "type": "seat-plugin",
     "authors": [
         {
             "name": "EVE Game - Nassen",
@@ -14,8 +14,11 @@
             "HullSoft\\Seat\\PingOps\\": "src/"
         }
     },
-    "version_normalized": "1.0.0",
-    "minimum-stability": "1.0",
+    "require": {
+        "eveseat/eveapi": "^3.0",
+        "eveseat/web": "^3.0"
+    },
+    "minimum-stability": "dev",
     "extra": {
         "laravel": {
             "providers": [
