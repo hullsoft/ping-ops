@@ -19,6 +19,7 @@
         "eveseat/web": "^3.0"
     },
     "minimum-stability": "dev",
+	"prefer-stable": true,
     "extra": {
         "laravel": {
             "providers": [
