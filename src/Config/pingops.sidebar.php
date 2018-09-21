@@ -21,8 +21,19 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 return [
 
-    // Language strings for your app go here
-    'title_structure' => 'Ping Ops - Target structure'
+    // Integrating with the SeAT menu is defined here.
+    // Refer to the web package for a structure reference.
+    'pingops' => [
+        'name' => 'Ping Ops',
+        'icon' => 'fa-cogs',
+        'route_segment' => 'example',
+        'entries' => [
+            [
+                'name' => 'Targets (Structure)',
+                'icon' => 'fa-th-list',
+                'route' => 'structure'
+            ]
+        ]
+    ]
 
 ];
-

@@ -26,8 +26,8 @@ Route::group([
 ], function () {
 
     // Your route definitions go here.
-    Route::get('/pingops', [
-        'as'   => 'pingops',
+    Route::get('/pingops/structure/', [
+        'as'   => 'structure',
         'uses' => 'HomeController@getHome'
     ]);
 

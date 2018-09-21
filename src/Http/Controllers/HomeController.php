@@ -19,7 +19,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-namespace LuxxSoft\Seat\DevApi\Http\Controllers;
+namespace HullSoft\Seat\PingOps\Http\Controllers;
 
 use Seat\Web\Http\Controllers\Controller;
 
@@ -35,7 +35,7 @@ class HomeController extends Controller
      */
     public function getHome()
     {
-        return view('pingops::index');
+        return view('pingops::structure');
     }
 
 }
