@@ -8,17 +8,13 @@ use Illuminate\Database\Eloquent\Model;
  * Class PingOspMain
  * @package HullSoft\Seat\PingOps\Models
  */
-class PingOspMain extends Model
-{
-    /**
-     * @var string
-     */
-    protected $table = 'hullsoft_ping_ops_main';
+class PingOspMain extends Model {
 
-    /**
-     * @var array
-     */
+    protected $table = 'hullsoft_ping_ops_main';
+    public $timestamps = true;
+    
     protected $fillable = [
-        'event', 'message',
+        'id','date_begin','system', 'message', 'result', 'created_at', 'updated_at'
     ];
+
 }
