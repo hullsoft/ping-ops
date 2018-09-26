@@ -25,13 +25,13 @@ return [
     // Refer to the web package for a structure reference.
     'pingops' => [
         'name' => 'Ping Ops',
-        'icon' => 'fa-cogs',
+        'icon' => 'fa-bell',
         'route_segment' => 'example',
         'entries' => [
             [
-                'name' => 'Targets (Structure)',
+                'name' => 'Pings table',
                 'icon' => 'fa-th-list',
-                'route' => 'structure'
+                'route' => 'pingops.index'
             ]
         ]
     ]

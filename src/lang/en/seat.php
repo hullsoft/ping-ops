@@ -22,7 +22,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 return [
 
     // Language strings for your app go here
-    'title_structure' => 'Ping Ops - Target structure'
+    'title' => 'Ping Ops',
+    'add_ping' => 'Add Ping or Ops'
 
 ];
 

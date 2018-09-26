@@ -17,7 +17,7 @@ class CreatePingOpsMainTable extends Migration
     {
 
         Schema::create('hullsoft_ping_ops_main', function (Blueprint $table) {            
-            $table->string('id_key')->primary();            
+            $table->increments('id');
             $table->dateTime('date_begin')->unique()->index();
             $table->string('system')->nullable();
             $table->string('message');
