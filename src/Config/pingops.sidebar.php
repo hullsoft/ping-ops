@@ -26,12 +26,14 @@ return [
     'pingops' => [
         'name' => 'Ping Ops',
         'icon' => 'fa-bell',
+        'permission' => 'pingops.setup',
         'route_segment' => 'example',
         'entries' => [
             [
                 'name' => 'Pings table',
                 'icon' => 'fa-th-list',
-                'route' => 'pingops.index'
+                'route' => 'pingops.index',
+                'permission' => 'pingops.setup'
             ]
         ]
     ]

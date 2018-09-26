@@ -29,34 +29,42 @@ Route::group([
     // Your route definitions go here.
     Route::get('/pingops', [
         'as' => 'pingops.index',
-        'uses' => 'HomeController@getHome'
+        'uses' => 'HomeController@getHome',
+        'middleware' => 'bouncer:pingops.setup'
     ]);
     Route::post('/pingops/add', [
         'as' => 'pingops.add',
-        'uses' => 'HomeController@addNew'
+        'uses' => 'HomeController@addNew',
+        'middleware' => 'bouncer:pingops.setup'
     ]);
     Route::get('/pingops/delete/{id}', [
         'as' => 'pingops.delete',
-        'uses' => 'HomeController@delete'
+        'uses' => 'HomeController@delete',
+        'middleware' => 'bouncer:pingops.setup'
     ]);
     Route::get('/pingops/edit/{id}', [
         'as' => 'pingops.edit',
-        'uses' => 'HomeController@edit'
+        'uses' => 'HomeController@edit',
+        'middleware' => 'bouncer:pingops.setup'
     ]);
     Route::post('/pingops/save/', [
         'as' => 'pingops.save',
-        'uses' => 'HomeController@savePing'
+        'uses' => 'HomeController@savePing',
+        'middleware' => 'bouncer:pingops.setup'
     ]);
     Route::get('/pingops/enabled/{id}', [
         'as' => 'pingops.enabled',
-        'uses' => 'HomeController@enabled'
+        'uses' => 'HomeController@enabled',
+        'middleware' => 'bouncer:pingops.setup'
     ]);
     Route::get('/pingops/disabled/{id}', [
         'as' => 'pingops.disabled',
-        'uses' => 'HomeController@disabled'
+        'uses' => 'HomeController@disabled',
+        'middleware' => 'bouncer:pingops.setup'
     ]);
     Route::get('/pingops/update-bot', [
         'as' => 'pingops.update.bot',
-        'uses' => 'HomeController@updateBot'
+        'uses' => 'HomeController@updateBot',
+        'middleware' => 'bouncer:pingops.setup'
     ]);
 });
