@@ -1,22 +1,19 @@
 <?php
 
-
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePingOpsMainTable extends Migration
-{
+class CreatePingOpsMainTable extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
 
-        Schema::create('hullsoft_ping_ops_main', function (Blueprint $table) {            
+        Schema::create('hullsoft_ping_ops_main', function (Blueprint $table) {
             $table->increments('id');
             $table->dateTime('date_begin')->unique()->index();
             $table->string('system')->nullable();
@@ -24,14 +21,16 @@ class CreatePingOpsMainTable extends Migration
             $table->string('corp')->nullable();
             $table->string('ali')->nullable();
             $table->string('object')->nullable();
-            $table->string('timing')->nullable();            
+            $table->string('timing')->nullable();
             $table->string('deviation')->nullable();
             $table->string('owner')->nullable();
             $table->string('regim')->nullable();
-            $table->boolean('active')->default(true);            
-            $table->string('result')->nullable();            
-            
-            
+            $table->boolean('active')->default(true);
+            $table->boolean('ping1')->default(false);
+            $table->boolean('ping2')->default(false);
+            $table->string('result')->nullable();
+
+
             $table->timestamps();
         });
     }
@@ -41,9 +40,9 @@ class CreatePingOpsMainTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
 
         Schema::drop('hullsoft_ping_ops_main');
     }
+
 }
